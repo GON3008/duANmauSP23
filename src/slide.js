@@ -1,91 +1,31 @@
-const slide = {
-    main : null,
-    elementImg : null,
-    imgSelected : 0,
-    nextSlide: function (){
-        if (this.imgSelected != null)
-        {
-            if (this.imgSelected < (this.elementImg.length - 1))
-            {
-                this.imgSelected++;
-                this.normalizeSlide();
-            }
-        }
-    },
-    prevSlide: function (){
-        if (this.imgSelected != null)
-        {
-            if (this.imgSelected > 0)
-            {
-                this.imgSelected--;
-                this.normalizeSlide();
-            }
-        }
-    },
-    normalizeSlide: function (){
+let slideIndex = 1;
+showSlide(slideIndex);
 
-        for (num = 0; num < this.elementImg.length; num++)
-        {
-            this.elementImg[num].classList.remove("hideLeft","prevLeftSecond","prev","selected","next","nextRightSecond","hideRight");
-        }
-
-        this.elementImg[this.imgSelected].classList.add("selected");
-
-        if (this.imgSelected > 2)
-        {
-            this.elementImg[this.imgSelected-2].classList.add("hideLeft");
-            this.elementImg[this.imgSelected-2].classList.add("prevLeftSecond");
-            this.elementImg[this.imgSelected-1].classList.add("prev");
-        }
-        else if (this.imgSelected > 1)
-        {
-            this.elementImg[this.imgSelected-2].classList.add("prevLeftSecond");
-            this.elementImg[this.imgSelected-1].classList.add("prev");
-        }
-        else if (this.imgSelected > 0)
-        {
-            this.elementImg[this.imgSelected-1].classList.add("prev");
-        }
-
-        if ((this.imgSelected + 3) < this.elementImg.length)
-        {
-            this.elementImg[this.imgSelected+3].classList.add("hideRight");
-            this.elementImg[this.imgSelected+2].classList.add("nextRightSecond");
-            this.elementImg[this.imgSelected+1].classList.add("next");
-        }
-        else if ((this.imgSelected + 2) < this.elementImg.length)
-        {
-            this.elementImg[this.imgSelected+2].classList.add("nextRightSecond");
-            this.elementImg[this.imgSelected+1].classList.add("next");
-        }
-        else if((this.imgSelected + 1) < this.elementImg.length)
-        {
-            this.elementImg[this.imgSelected+1].classList.add("next");
-        }
-    }
+// change slide with the prev/next button
+function moveSlide(moveStep) {
+    showSlide(slideIndex += moveStep);
 }
 
-window.onload = () => {
+// change slide with the dots
+function currentSlide(n) {
+    showSlide(slideIndex = n);
+}
 
-    slide.main = document.getElementById("carousel");
-    slide.elementImg = slide.main.getElementsByClassName("slideImg");
+function showSlide(n) {
+    let i;
+    const slides = document.getElementsByClassName("slide");
+  
+    if (n > slides.length) { slideIndex = 1 }
+    if (n < 1) { slideIndex = slides.length }
 
-    for (num = 0; num < slide.elementImg.length; num++)
-    {
-        slide.elementImg[num].setAttribute("img-number", num);
-        
-        slide.elementImg[num].addEventListener("click", (event) => {
-            slide.imgSelected = parseInt(event.target.parentElement.getAttribute("img-number"));
-            slide.normalizeSlide();
-        });
-
-        if (slide.elementImg[num].classList.contains("selected"))
-        {
-            slide.imgSelected = num;
-        }
+    // hide all slides
+    for (i = 0; i < slides.length; i++) {
+        slides[i].classList.add('hidden');
     }
 
-    document.getElementById("prev").addEventListener("click", () => {slide.prevSlide()});
-    document.getElementById("next").addEventListener("click", () => {slide.nextSlide()});
+  
+    // show the active slide
+    slides[slideIndex - 1].classList.remove('hidden');
+console.log(slideIndex)
 
 }

@@ -1,0 +1,106 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link href="../dist/output.css" rel="stylesheet">
+    <title>Document</title>
+</head>
+<body>
+    <div class="flex">
+        <a  class="cursor-pointer" onclick="moveSlide(-1)">
+            <
+  
+          </a>
+        <ul class="flex gap-4 text-center slide ">
+            <li class="hover:border hover:rounded-md hover:bg-stone-50"> <img  src="https://openlivenft.io/static/media/hot-1.d7177fc1720af111bc0d.png?resize=medium" alt="">Alexandra <p class=" font-bold">Colorful Born Head</p>
+            </li>
+            <li class="hover:border hover:rounded-md hover:bg-stone-50"> <img  src="https://openlivenft.io/static/media/hot-2.6a82748cc39ccd1dc64c.png?resize=medium" alt="">Alexandra <p class=" font-bold">Colorful Born Head</p>
+            </li>
+            <li class="hover:border hover:rounded-md hover:bg-stone-50"> <img   src="https://openlivenft.io/static/media/hot-3.e1cd348e1593d8665733.png?resize=medium" alt="">Alexandra <p class=" font-bold">Colorful Born Head</p>
+            </li>
+            <li class="hover:border hover:rounded-md hover:bg-stone-50"><img  src="https://openlivenft.io/static/media/hot-4.d2278a1181b317932f6e.png?resize=medium" alt="">Alexandra <p class=" font-bold">Colorful Born Head</p>
+            </li>
+        </ul>
+
+        <ul class="flex gap-4 text-center slide ">
+            <li class="hover:border hover:rounded-md hover:bg-stone-50"> <img  src="https://openlivenft.io/static/media/hot-1.d7177fc1720af111bc0d.png?resize=medium" alt="">Alexandra <p class=" font-bold">Colorful Born Head</p>
+            </li>
+            <li class="hover:border hover:rounded-md hover:bg-stone-50"> <img  src="https://openlivenft.io/static/media/hot-2.6a82748cc39ccd1dc64c.png?resize=medium" alt="">Alexandra <p class=" font-bold">Colorful Born Head</p>
+            </li>
+            <li class="hover:border hover:rounded-md hover:bg-stone-50"> <img src="https://openlivenft.io/static/media/hot-3.e1cd348e1593d8665733.png?resize=medium" alt="">Alexandra <p class=" font-bold">Colorful Born Head</p>
+            </li>
+            
+        </ul>
+        
+
+        <a class="cursor-pointer" onclick="moveSlide(1)">
+           >
+
+        </a>
+
+    </div>
+
+    <a  class="cursor-pointer" onclick="moveSlide(-1)">
+        <
+
+      </a>
+    <ul class="flex slide">
+    <li><a href="#"><img src="https://abcdefapi.openlivenft.io/storage/bb1beb4b-5d3c-4805-9bdf-28d1174e335f.jpeg?resize=medium?resize=medium" alt=""></a></li>
+    <li><a href="#"><img src="https://abcdefapi.openlivenft.io/storage/ccf60867-75c9-4e3e-878b-f2cb80748593.jpeg?resize=medium?resize=medium" alt=""></a></li>
+    <li><a href="#"><img src="https://abcdefapi.openlivenft.io/storage/ba07afcb-a18e-4cc4-bdc0-2849f65b4131.jpeg?resize=medium?resize=medium" alt=""></a></li>
+</ul>
+
+<ul class="flex slide">
+    <li><a href="#"><img src="https://abcdefapi.openlivenft.io/storage/511e9b72-04ec-454e-9a44-30029240dcfd.jpeg?resize=medium?resize=medium" alt=""></a></li>
+    <li><a href="#"><img src="https://abcdefapi.openlivenft.io/storage/3e33c675-2045-4d66-a487-45eec0daf98f.jpeg?resize=medium?resize=medium" alt=""></a></li>
+    <li><a href="#"><img src="https://abcdefapi.openlivenft.io/storage/4c462a2b-261f-4284-81f9-25b7805216f1.jpeg?resize=medium?resize=medium" alt=""></a></li>
+</ul>
+
+<ul class="flex slide">
+    <li><a href="#"><img src="https://abcdefapi.openlivenft.io/storage/f68f2c35-c53b-4d52-8f5e-c484bb3943a6.jpeg?resize=medium?resize=medium" alt=""></a></li>
+    <li><a href="#"><img src="https://abcdefapi.openlivenft.io/storage/63e58589-29bd-4292-ad77-886b561c2d4c.jpg?resize=medium?resize=medium" alt=""></a></li>
+    <li><a href="#"><img src="https://abcdefapi.openlivenft.io/storage/553f9caf-b9e4-4dcb-b42b-9ef301198067.png?resize=medium?resize=medium" alt=""></a></li>
+</ul>
+
+<a class="cursor-pointer" onclick="moveSlide(1)">
+    >
+
+ </a>
+    <script>
+        // set the default active slide to the first one
+        let slideIndex = 1;
+        showSlide(slideIndex);
+
+        // change slide with the prev/next button
+        function moveSlide(moveStep) {
+            showSlide(slideIndex += moveStep);
+        }
+
+        // change slide with the dots
+        function currentSlide(n) {
+            showSlide(slideIndex = n);
+        }
+
+        function showSlide(n) {
+            let i;
+            const slides = document.getElementsByClassName("slide");
+          
+            if (n > slides.length) { slideIndex = 1 }
+            if (n < 1) { slideIndex = slides.length }
+
+            // hide all slides
+            for (i = 0; i < slides.length; i++) {
+                slides[i].classList.add('hidden');
+            }
+
+          
+            // show the active slide
+            slides[slideIndex - 1].classList.remove('hidden');
+
+        console.log(slideIndex)
+        }
+    </script>
+</body>
+</html>
