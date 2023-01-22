@@ -7,6 +7,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Document</title>
     <link href="../dist/output.css" rel="stylesheet">
+    <link rel="stylesheet" href="style.css">
 </head>
 <!-- <style>
     .absolutes{
@@ -19,8 +20,8 @@
     }
 </style> -->
 
-<body>
-    <div class="border rounded-md bg-neutral-200 ">
+<body class="box-border">
+    <div class="border rounded-md bg-neutral-200">
         <div id="onScroll" class="stick w-full sticky inset-0 bg-neutral-100 border border-neutral-200 py-5">
             <div class=" container mx-auto md:flex justify-between">
                 <div class="flex gap-1">
@@ -100,13 +101,19 @@
         </div>
         <div class="container mx-auto">
             <div class=" flex  justify-between">
-                <div class=" pt-20 absolutes">
-                    <img class="" style="width: 280px; height: 380px;" src="image/bg_nft.png" alt="">
-                    <!-- <div class="relations flex">
-            <img class="" src="image/bg_nft1.png" alt="">
-            <img class="" src="image/bg_nft1.png" alt="">
-            </div> -->
+               <main>
+                <div  class=" pt-20 " id="carousel">
+                    <div class="slideImg hideLeft">
+                    <img  style="width: 280px; height: 380px;" src="image/bg_nft.png" alt="">
+                    </div>
+                    <div class="slideImg selected">
+                        <img  style="width: 280px; height: 380px;" src="https://abcdefapi.openlivenft.io/storage/c7084997-6a2a-4566-8f1a-e292694c45d5.jpeg" alt="">
+                    </div>
+                    <div class="slideImg hideRight">
+                        <img  style="width: 280px; height: 380px;" src="https://abcdefapi.openlivenft.io/storage/0b3f1795-6de7-46a6-9af8-072ec1080b1d.png" alt="">
+                    </div>
                 </div>
+                </main>
                 <div class="pt-20">
                     <div class="font-bold text-4xl flex gap-2">
                         <h2>DO </h2>
@@ -146,8 +153,8 @@
                 <img class="w-full" src="https://openlivenft.io/static/media/banner-hello-section.5dc4bbbccb5f5c2448db.png" alt="">
             </div>
             <h4 class="font-bold text-4xl py-4">Hot Auctions</h4>
-            <div class="flex">
-                <button>
+            <div id="slider" class="flex">
+                <button id="btn-prev">
                     <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor" class="w-6 h-6">
                         <path stroke-linecap="round" stroke-linejoin="round" d="M15.75 19.5L8.25 12l7.5-7.5" />
                     </svg>
@@ -164,7 +171,7 @@
                     </li>
                 </ul>
 
-                <ul id="" class="flex gap-4 text-center hidden">
+                <ul class="flex gap-4 text-center hidden">
                     <li class="hover:border hover:rounded-md hover:bg-stone-50"> <img src="https://openlivenft.io/static/media/hot-1.d7177fc1720af111bc0d.png?resize=medium" alt="">Alexandra <p class=" font-bold">Colorful Born Head</p>
                     </li>
                     <li class="hover:border hover:rounded-md hover:bg-stone-50"> <img src="https://openlivenft.io/static/media/hot-2.6a82748cc39ccd1dc64c.png?resize=medium" alt="">Alexandra <p class=" font-bold">Colorful Born Head</p>
@@ -174,16 +181,93 @@
                     <li class="hover:border hover:rounded-md hover:bg-stone-50"><img src="https://openlivenft.io/static/media/hot-4.d2278a1181b317932f6e.png?resize=medium" alt="">Alexandra <p class=" font-bold">Colorful Born Head</p>
                     </li>
                 </ul>
-                <button>
+                <button id="btn-next">
                     <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor" class="w-6 h-6">
                         <path stroke-linecap="round" stroke-linejoin="round" d="M8.25 4.5l7.5 7.5-7.5 7.5" />
                     </svg>
 
                 </button>
+                <!-- <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.1/jquery.min.js"></script>
+
+                <script>
+                    jQuery(document).ready(function($) {
+
+                        $('#checkbox').change(function() {
+                            setInterval(function() {
+                                moveRight();
+                            }, 3000);
+                        });
+
+                        var slideCount = $('#slider ul li').length;
+                        var slideWidth = $('#slider ul li').width();
+                        var slideHeight = $('#slider ul li').height();
+                        var sliderUlWidth = slideCount * slideWidth;
+
+                        $('#slider ul li:last-child').prependTo('#slider ul');
+
+                        function moveLeft() {
+                            $('#slider ul').animate({
+                                left: +slideWidth
+                            }, 200, function() {
+                                $('#slider ul li:last-child').prependTo('#slider ul');
+                            });
+                        };
+
+                        function moveRight() {
+                            $('#slider ul').animate({
+                                left: -slideWidth
+                            }, 200, function() {
+                                $('#slider ul li:first-child').appendTo('#slider ul');
+                            });
+                        };
+
+                        $('btn-prev').click(function() {
+                            moveLeft();
+                        });
+
+                        $('btn-next').click(function() {
+                            moveRight();
+                        });
+
+                    });
+                </script> -->
             </div>
+            <h4 class="font-bold text-4xl py-4">Hot Collections</h4>
+            <div class="">
+                <ul class="flex gap-4">
+                    <li class="hover:border hover:rounded-md hover:bg-stone-50"><img src="https://abcdefapi.openlivenft.io/storage/bb1beb4b-5d3c-4805-9bdf-28d1174e335f.jpeg?resize=medium?resize=medium" alt=""></li>
+                    <li class="hover:border hover:rounded-md hover:bg-stone-50"><img  src="https://abcdefapi.openlivenft.io/storage/ccf60867-75c9-4e3e-878b-f2cb80748593.jpeg?resize=medium?resize=medium" alt=""><a href=""></a></li>
+                    <li class="hover:border hover:rounded-md hover:bg-stone-50"><img src="https://abcdefapi.openlivenft.io/storage/511e9b72-04ec-454e-9a44-30029240dcfd.jpeg?resize=medium?resize=medium" alt=""></li>
+                </ul>
+            </div>
+            <h4 class="font-bold text-4xl py-4">Trending NFTs</h4>
+            <div class="flex">
+                <ul class="flex gap-4">
+                    <!-- <li class=""><img src="https://abcdefapi.openlivenft.io/storage/a5619357-bca3-4fef-9f69-63e5d67efe21.jpg?resize=medium" alt=""></li>
+                    <li class=""><img  src="https://abcdefapi.openlivenft.io/storage/480da8be-823c-4693-b781-d0523dce4ba4.jpg?resize=medium" alt=""></li>
+                    <li class=""><img src="https://abcdefapi.openlivenft.io/storage/960c2445-5f2c-451c-926d-c9bc4b7a773b.jpg?resize=medium" alt=""></li>
+                    <li class=""><img src="https://abcdefapi.openlivenft.io/storage/f9233669-d3a6-49da-b44d-78ddc823ff83.jpg?resize=medium" alt=""></li> -->
+                </ul>
+                </div>
+                <h4 class="font-bold text-4xl py-4">Hot Brands</h4>
+                <div class="flex">
+                </div>
         </div>
+        <footer class="bg-neutral-200">
+            <div class="py-6 text-center">
+                <h5 class="font-bold">DESIGN LIFE BY YOUR WAY!</h5>
+            </div>
+         <div class="bg-blue-200">
+            <div class="container mx-auto">
+            <div class="flex gap-1">
+                    <img class="w-14 h-14" src="image/NFT Logo PNG Vector (EPS) Free Download.png" alt="">
+                    <h1 class="pt-3 font-bold text-cyan-500 text-xl">ONLINE NFT</h1>
+                </div>
+            </div>
+         </div>
+        </footer>
     </div>
 </body>
 <script src="onscroll.js"></script>
-
+<script src="slide.js"></script>
 </html>
