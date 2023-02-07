@@ -1,26 +1,26 @@
-
-let slideMove=1;
-showSlide(slideMove);
+let slideIndex= 1;
+showSlider(slideIndex);
 
 // change slide with the prev/next button
-function moveSlider(moveStep) {
-    showSlide(slideMove += moveStep);
+function moveSlider(moveSLIDE) {
+    showSlider(slideIndex += moveSLIDE);
+    
 }
 
 // change slide with the dots
-function currentSlide(n) {
-    showSlide(slideMove = n);
+function currentSlider(n) {
+    showSlider(slideIndex = n);
 }
 
-function showSlide(n) {
+function showSlider(n) {
     let i;
     const slides = document.getElementsByClassName("slider");
 
     if (n > slides.length) {
-        slideMove = 1
+        slideIndex = 1
     }
     if (n < 1) {
-        slideMove = slides.length
+        slideIndex = slides.length
     }
 
     // hide all slides
@@ -30,7 +30,7 @@ function showSlide(n) {
 
 
     // show the active slide
-    slides[slideMove - 1].classList.remove('hidden');
+    slides[slideIndex - 1].classList.remove('hidden');
     console.log(slideMove)
 
 }

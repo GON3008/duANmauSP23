@@ -1,35 +1,678 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="../dist/output.css">
+    <link id="u-theme-google-font" rel="stylesheet"
+        href="https://fonts.googleapis.com/css?family=Roboto:100,100i,300,300i,400,400i,500,500i,700,700i,900,900i|Open+Sans:300,300i,400,400i,500,500i,600,600i,700,700i,800,800i">
+    <link id="u-page-google-font" rel="stylesheet"
+        href="https://fonts.googleapis.com/css?family=Montserrat:100,100i,200,200i,300,300i,400,400i,500,500i,600,600i,700,700i,800,800i,900,900i|Open+Sans:300,300i,400,400i,500,500i,600,600i,700,700i,800,800i">
 
 
 
 
-<div class="grid grid-cols-3 mx-auto container py-6">
-    <ul>
-        <h6 class="font-medium text-xl">Marketplace</h6>
-        <li class="font-normal"><a href="#">Discover Event</a></li>
-        <li class="font-normal"><a href="#">Help Center</a></li>
-    </ul>
-    <ul>
-        <h6 class="font-medium text-xl">Links</h6>
-        <li class="font-normal"><a href="#">About Us</a></li>
-        <li class="font-normal"><a href="#">Docs</a></li>
-        <li class="font-normal"><a href="#">Support </a></li>
-    </ul>
-    <ul>
-        <h6 class="font-medium text-xl">Join Newsletter</h6>
-        <p class="py-3">Subscribe our newsletter to get more information by chain</p>
-        <label class="">
-            <div class="pt-2 absolute">
-            <button class="absolute border rounded-full bg-blue-400 ml-60 px-5 py-1 text-white">Submit</button>
+</head>
+<style>
+    .submenu::after,
+    submenu::before {
+        position: absolute;
+        pointer-events: none;
+        bottom: 100%;
+    }
+
+    .submenu li {
+        float: none !important;
+    }
+
+    .u-text {}
+
+    .u-section-1,
+    .u-text-1 {
+        font-size: 3.75rem;
+        font-family: Montserrat, sans-serif;
+    }
+</style>
+
+<body class="box-border">
+    <div class="">
+        <img src="https://bizweb.dktcdn.net/100/342/645/themes/701397/assets/banner.jpg?1664094665337" alt="">
+    </div>
+    <div class="container mx-auto">
+        <div class="flex justify-between py-8">
+            <img class="w-[150px]"
+                src="https://bizweb.dktcdn.net/100/342/645/themes/701397/assets/logo.png?1664094665337" alt="">
+            <label class="text-black pt-4">
+                <button class="cursor-pointer absolute" id="btn-search">
+                    <svg id="search" class="  w-6 h-6 pt-2 " xmlns="http://www.w3.org/2000/svg" fill="none"
+                        viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor" class="w-6 h-6">
+                        <path stroke-linecap="round" stroke-linejoin="round"
+                            d="M21 21l-5.197-5.197m0 0A7.5 7.5 0 105.196 5.196a7.5 7.5 0 0010.607 10.607z" />
+                    </svg>
+                </button>
+                <input type="text" name="" class="text-center py-1 bg-white rounded-lg border border-gray-300 px-6"
+                    placeholder="search">
+            </label>
+            <div class="flex gap-6">
+                <button class=" border-2 rounded-full border-red-700 px-6 text-red-600 hover:bg-red-50 ">
+                    <!-- <a class="absolute">
+                <svg class="w-16 pt-2 ml-32 border rounded-full bg-red-700" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor" class="w-6 h-6">
+                    <path stroke-linecap="round" stroke-linejoin="round" d="M2.25 6.75c0 8.284 6.716 15 15 15h2.25a2.25 2.25 0 002.25-2.25v-1.372c0-.516-.351-.966-.852-1.091l-4.423-1.106c-.44-.11-.902.055-1.173.417l-.97 1.293c-.282.376-.769.542-1.21.38a12.035 12.035 0 01-7.143-7.143c-.162-.441.004-.928.38-1.21l1.293-.97c.363-.271.527-.734.417-1.173L6.963 3.102a1.125 1.125 0 00-1.091-.852H4.5A2.25 2.25 0 002.25 4.5v2.25z" />
+                  </svg> 
+            </a> -->
+                    Tư vấn bán hàng
+                    <br>
+                    Gọi ngay 19006605
+
+                </button>
+
+                <button class="use-name">
+                    <svg class="w-9" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24"
+                        stroke-width="1.5" stroke="currentColor" class="w-6 h-6">
+                        <path stroke-linecap="round" stroke-linejoin="round"
+                            d="M17.982 18.725A7.488 7.488 0 0012 15.75a7.488 7.488 0 00-5.982 2.975m11.963 0a9 9 0 10-11.963 0m11.963 0A8.966 8.966 0 0112 21a8.966 8.966 0 01-5.982-2.275M15 9.75a3 3 0 11-6 0 3 3 0 016 0z" />
+                    </svg>
+
+                </button>
+                <button class="shopping-cart">
+                    <svg class="w-9" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24"
+                        stroke-width="1.5" stroke="currentColor" class="w-6 h-6">
+                        <path stroke-linecap="round" stroke-linejoin="round"
+                            d="M2.25 3h1.386c.51 0 .955.343 1.087.835l.383 1.437M7.5 14.25a3 3 0 00-3 3h15.75m-12.75-3h11.218c1.121-2.3 2.1-4.684 2.924-7.138a60.114 60.114 0 00-16.536-1.84M7.5 14.25L5.106 5.272M6 20.25a.75.75 0 11-1.5 0 .75.75 0 011.5 0zm12.75 0a.75.75 0 11-1.5 0 .75.75 0 011.5 0z" />
+                    </svg>
+
+                </button>
             </div>
-            <input type="email" placeholder="Your email address" class="px-20 py-3 border rounded-full ">
-            
-        </label>
-    </ul>
-</div>  
-</div>
-<div class="border bg-blue-200 py-6 text-xs  font-medium">
-<div class="mx-auto grid grid-cols-2 text-gray-500 text-center pt-2">
-<p>Coppyright 2022 OPENLIVE NFT LLC. All rights reserved</p>
-<p>We use cookies for better service.</p>
-</div>
-</div>
+        </div>
+    </div>
+    <div class="border rounded-md bg-red-500 py-6">
+        <ul class="container mx-auto flex justify-between text-white font-medium text-lg">
+            <li><a href="#">Trang Chủ</a></li>
+            <li><a href="#">Sản Phẩm</a></li>
+            <li><a href="#">Giày Thể thao</a></li>
+            <li><a href="#">Liên Hệ</a></li>
+            <li><a href="#">Giới Thiệu</a></li>
+            <li><a href="#">Tin Tức</a></li>
+        </ul>
+    </div>
+    <div class="banner">
+        <img class="w-[100%]"
+            src="https://bizweb.dktcdn.net/100/342/645/themes/701397/assets/slider_2.jpg?1664094665337" alt="">
+    </div>
+    <div class="container mx-auto py-8">
+        <div class="product-small ">
+            <div class="round-1-prd md:grid grid-cols-2 gap-3">
+                <div class="round-1-prd-1">
+                    <img class="w-[100%] h-[250px]"
+                        src="https://bizweb.dktcdn.net/100/342/645/themes/701397/assets/banner_project_1.jpg?1664094665337"
+                        alt="">
+                </div>
+
+                <div class="round-2-prd-4">
+                    <img class="w-[100%] h-[250px]"
+                        src="https://bizweb.dktcdn.net/100/342/645/themes/701397/assets/banner_project_2.jpg?1664094665337"
+                        alt="">
+                </div>
+                <!-- <div class="grid grid-cols-2 pt-3 gap-4">
+                <div class="round-1-prd-2">
+                    <img class="w-[100%]" src="https://bizweb.dktcdn.net/100/342/645/themes/701397/assets/banner_project_3.jpg?1664094665337" alt="">
+                </div>
+                <div class="round-1-prd-3">
+                    <img  class="w-[100%]"src="https://bizweb.dktcdn.net/100/342/645/themes/701397/assets/banner_project_4.jpg?1664094665337" alt="">
+                </div>
+            </div> -->
+            </div>
+            <div class="round-2-prd md:grid grid-cols-3 gap-3 pt-3">
+                <div class="round-1-prd-2">
+                    <img class="w-[100%]"
+                        src="https://bizweb.dktcdn.net/100/342/645/themes/701397/assets/banner_project_3.jpg?1664094665337"
+                        alt="">
+                </div>
+                <div class="round-1-prd-3">
+                    <img class="w-[100%]"
+                        src="https://bizweb.dktcdn.net/100/342/645/themes/701397/assets/banner_project_4.jpg?1664094665337"
+                        alt="">
+                </div>
+                <div class="round-2-prd-5">
+                    <img class="w-[100%]"
+                        src="https://bizweb.dktcdn.net/100/342/645/themes/701397/assets/banner_project_5.jpg?1664094665337"
+                        alt="">
+                </div>
+            </div>
+        </div>
+    </div>
+    <div class="container mx-auto bg-neutral-100 py-10">
+        <h1 class="text-center font-medium text-3xl ">Sản Phẩm Bán Chạy</h1>
+        <div class="md:grid grid-cols-5 gap-4 pt-8">
+            <div class="border-2 rounded-md border-dotted">
+                <img class="h-[280px]"
+                    src="https://bizweb.dktcdn.net/thumb/medium/100/342/645/products/bd30ea8934835dfbad4dca4072b1ba3b.jpg?v=1545572480550"
+                    alt="">
+                <p class=" text-center">Giày đá bóng sân cỏ nhân tạo</p>
+                <hr class="boder-2 rounded-md border-dotted">
+                <div class="price-1 py-2 md:flex justify-between">
+                    <div class="">
+                        <p class="text-red-500">1.200.000đ</p>
+                        <p class="text-xs font-mono line-through">1.500.000đ</p>
+                    </div>
+                    <button class="border rounded-md bg-red-500 px-3 text-white">Chi tiết</button>
+                </div>
+            </div>
+
+            <div class="border-2 rounded-md border-dotted">
+                <img class="h-[280px]"
+                    src="https://bizweb.dktcdn.net/thumb/medium/100/342/645/products/bd30ea8934835dfbad4dca4072b1ba3b.jpg?v=1545572480550"
+                    alt="">
+                <p class=" text-center">Giày đá bóng sân cỏ nhân tạo</p>
+                <hr class="boder-2 rounded-md border-dotted">
+                <div class="price-1 py-2 md:flex justify-between">
+                    <div class="">
+                        <p class="text-red-500">1.200.000đ</p>
+                        <p class="text-xs font-mono line-through">1.500.000đ</p>
+                    </div>
+                    <button class="border rounded-md bg-red-500 px-3 text-white">Chi tiết</button>
+                </div>
+            </div>
+
+            <div class="border-2 rounded-md border-dotted">
+                <img class="h-[280px]"
+                    src="https://bizweb.dktcdn.net/thumb/medium/100/342/645/products/bd30ea8934835dfbad4dca4072b1ba3b.jpg?v=1545572480550"
+                    alt="">
+                <p class=" text-center">Giày đá bóng sân cỏ nhân tạo</p>
+                <hr class="boder-2 rounded-md border-dotted">
+                <div class="price-1 py-2 md:flex justify-between">
+                    <div class="">
+                        <p class="text-red-500">1.200.000đ</p>
+                        <p class="text-xs font-mono line-through">1.500.000đ</p>
+                    </div>
+                    <button class="border rounded-md bg-red-500 px-3 text-white">Chi tiết</button>
+                </div>
+            </div>
+
+            <div class="border-2 rounded-md border-dotted">
+                <img class="h-[280px]"
+                    src="https://bizweb.dktcdn.net/thumb/medium/100/342/645/products/bd30ea8934835dfbad4dca4072b1ba3b.jpg?v=1545572480550"
+                    alt="">
+                <p class=" text-center">Giày đá bóng sân cỏ nhân tạo</p>
+                <hr class="boder-2 rounded-md border-dotted">
+                <div class="price-1 py-2 md:flex justify-between">
+                    <div class="">
+                        <p class="text-red-500">1.200.000đ</p>
+                        <p class="text-xs font-mono line-through">1.500.000đ</p>
+                    </div>
+                    <button class="border rounded-md bg-red-500 px-3 text-white">Chi tiết</button>
+                </div>
+            </div>
+
+            <div class="border-2 rounded-md border-dotted">
+                <img class="h-[280px]"
+                    src="https://bizweb.dktcdn.net/thumb/medium/100/342/645/products/bd30ea8934835dfbad4dca4072b1ba3b.jpg?v=1545572480550"
+                    alt="">
+                <p class=" text-center">Giày đá bóng sân cỏ nhân tạo</p>
+                <hr class="boder-2 rounded-md border-dotted">
+                <div class="price-1 py-2 md:flex justify-between">
+                    <div class="">
+                        <p class="text-red-500">1.200.000đ</p>
+                        <p class="text-xs font-mono line-through">1.500.000đ</p>
+                    </div>
+                    <button class="border rounded-md bg-red-500 px-3 text-white">Chi tiết</button>
+                </div>
+            </div>
+        </div>
+    </div>
+    <div class="py-20">
+        <div class="container mx-auto bg-neutral-100 py-10">
+            <div class="md:grid grid-cols-2 gap-20">
+                <div class="">
+                    <img class="w-[100%]"
+                        src="https://bizweb.dktcdn.net/100/342/645/themes/701397/assets/banner_product_nangdong.jpg?1664094665337"
+                        alt="">
+                </div>
+                <div class="">
+                    <h2 class="text-3xl font-medium  hover:text-red-500 cursor-pointer">Sneaker Năng Động</h2>
+                    <p class="py-8">Sneaker đã trở thành một biểu tượng của xã hội, là một sản phẩm của thời đại với
+                        những thiết kế cổ điển và những điều đó đều nằm trong những đôi giày Sneaker Delta Shoes. Không
+                        lỗi thời với thời gian, mang dấu ấn cá tính khác biệt và tạo mọi sự lôi cuốn từ chính đôi giày
+                        Sneaker. Tự tạo cuộc chơi, tự tạo phong cách, đó là Delta Shoes</p>
+                    <button class="text-xl font-medium">Xem Tất Cả > </button>
+                </div>
+            </div>
+            <div class="md:grid grid-cols-5 gap-4 pt-8">
+                <div class="border-2 rounded-md border-dotted">
+                    <img class="h-[280px]" src="" alt="">
+                    <p class=" text-center">Giày thể thao Hura chính hãng mới về</p>
+                    <hr class="boder-2 rounded-md border-dotted">
+                    <div class="price-1 py-2 md:flex justify-between">
+                        <div class="">
+                            <p class="text-red-500">1.200.000đ</p>
+                            <p class="text-xs font-mono line-through">1.500.000đ</p>
+                        </div>
+                        <button class="border rounded-md bg-red-500 px-3 text-white">Chi tiết</button>
+                    </div>
+                </div>
+
+                <div class="border-2 rounded-md border-dotted">
+                    <img class="h-[280px]" src="" alt="">
+                    <p class=" text-center">Giày thể thao Hura chính hãng mới về</p>
+                    <hr class="boder-2 rounded-md border-dotted">
+                    <div class="price-1 py-2 md:flex justify-between">
+                        <div class="">
+                            <p class="text-red-500">1.200.000đ</p>
+                            <p class="text-xs font-mono line-through">1.500.000đ</p>
+                        </div>
+                        <button class="border rounded-md bg-red-500 px-3 text-white">Chi tiết</button>
+                    </div>
+                </div>
+
+                <div class="border-2 rounded-md border-dotted">
+                    <img class="h-[280px]" src="" alt="">
+                    <p class=" text-center">Giày thể thao Hura chính hãng mới về</p>
+                    <hr class="boder-2 rounded-md border-dotted">
+                    <div class="price-1 py-2 md:flex justify-between">
+                        <div class="">
+                            <p class="text-red-500">1.200.000đ</p>
+                            <p class="text-xs font-mono line-through">1.500.000đ</p>
+                        </div>
+                        <button class="border rounded-md bg-red-500 px-3 text-white">Chi tiết</button>
+                    </div>
+                </div>
+
+                <div class="border-2 rounded-md border-dotted">
+                    <img class="h-[280px]" src="" alt="">
+                    <p class=" text-center">Giày thể thao Hura chính hãng mới về</p>
+                    <hr class="boder-2 rounded-md border-dotted">
+                    <div class="price-1 py-2 md:flex justify-between">
+                        <div class="">
+                            <p class="text-red-500">1.200.000đ</p>
+                            <p class="text-xs font-mono line-through">1.500.000đ</p>
+                        </div>
+                        <button class="border rounded-md bg-red-500 px-3 text-white">Chi tiết</button>
+                    </div>
+                </div>
+
+                <div class="border-2 rounded-md border-dotted">
+                    <img class="h-[280px]" src="" alt="">
+                    <p class=" text-center">Giày thể thao Hura chính hãng mới về</p>
+                    <hr class="boder-2 rounded-md border-dotted">
+                    <div class="price-1 py-2 md:flex justify-between">
+                        <div class="">
+                            <p class="text-red-500">1.200.000đ</p>
+                            <p class="text-xs font-mono line-through">1.500.000đ</p>
+                        </div>
+                        <button class="border rounded-md bg-red-500 px-3 text-white">Chi tiết</button>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <div class="container mx-auto bg-neutral-100 py-10">
+        <div class="md:grid grid-cols-2 gap-20">
+            <div class="">
+                <h3 class="text-3xl font-medium hover:text-red-500 cursor-pointer">Slip-On Thanh Lịch</h3>
+                <p class="py-8">Ra đời từ thế kỉ XX, từ sự tiện dụng cho đến biểu tượng của phong cách casual. Giày lười
+                    Delta Shoes là một trong những đại diện của sự chững chạc trong thời trang, là xu hướng của thế giới
+                    thời trang tối giản. Đồng hành cùng Delta Shoes là đồng hành với chuẩn mực của chính bạn.</p>
+                <button class="text-xl font-medium hover:text-red-500">Xem Tất Cả ></button>
+            </div>
+            <div class="">
+                <img class="w-[100%]"
+                    src="https://bizweb.dktcdn.net/100/342/645/themes/701397/assets/banner_product_thanhlich.jpg?1664094665337"
+                    alt="">
+            </div>
+        </div>
+        <div class="md:grid grid-cols-5 gap-4 pt-8">
+            <div class="border-2 rounded-md border-dotted">
+                <img class="h-[280px]" src="" alt="">
+                <p class=" text-center">Giày thể thao Hura chính hãng mới về</p>
+                <hr class="boder-2 rounded-md border-dotted">
+                <div class="price-1 py-2 md:flex justify-between">
+                    <div class="">
+                        <p class="text-red-500">1.200.000đ</p>
+                        <p class="text-xs font-mono line-through">1.500.000đ</p>
+                    </div>
+                    <button class="border rounded-md bg-red-500 px-3 text-white">Chi tiết</button>
+                </div>
+            </div>
+
+            <div class="border-2 rounded-md border-dotted">
+                <img class="h-[280px]" src="" alt="">
+                <p class=" text-center">Giày thể thao Hura chính hãng mới về</p>
+                <hr class="boder-2 rounded-md border-dotted">
+                <div class="price-1 py-2 md:flex justify-between">
+                    <div class="">
+                        <p class="text-red-500">1.200.000đ</p>
+                        <p class="text-xs font-mono line-through">1.500.000đ</p>
+                    </div>
+                    <button class="border rounded-md bg-red-500 px-3 text-white">Chi tiết</button>
+                </div>
+            </div>
+
+            <div class="border-2 rounded-md border-dotted">
+                <img class="h-[280px]" src="" alt="">
+                <p class=" text-center">Giày thể thao Hura chính hãng mới về</p>
+                <hr class="boder-2 rounded-md border-dotted">
+                <div class="price-1 py-2 md:flex justify-between">
+                    <div class="">
+                        <p class="text-red-500">1.200.000đ</p>
+                        <p class="text-xs font-mono line-through">1.500.000đ</p>
+                    </div>
+                    <button class="border rounded-md bg-red-500 px-3 text-white">Chi tiết</button>
+                </div>
+            </div>
+
+            <div class="border-2 rounded-md border-dotted">
+                <img class="h-[280px]" src="" alt="">
+                <p class=" text-center">Giày thể thao Hura chính hãng mới về</p>
+                <hr class="boder-2 rounded-md border-dotted">
+                <div class="price-1 py-2 md:flex justify-between">
+                    <div class="">
+                        <p class="text-red-500">1.200.000đ</p>
+                        <p class="text-xs font-mono line-through">1.500.000đ</p>
+                    </div>
+                    <button class="border rounded-md bg-red-500 px-3 text-white">Chi tiết</button>
+                </div>
+            </div>
+
+            <div class="border-2 rounded-md border-dotted">
+                <img class="h-[280px]" src="" alt="">
+                <p class=" text-center">Giày thể thao Hura chính hãng mới về</p>
+                <hr class="boder-2 rounded-md border-dotted">
+                <div class="price-1 py-2 md:flex justify-between">
+                    <div class="">
+                        <p class="text-red-500">1.200.000đ</p>
+                        <p class="text-xs font-mono line-through">1.500.000đ</p>
+                    </div>
+                    <button class="border rounded-md bg-red-500 px-3 text-white">Chi tiết</button>
+                </div>
+            </div>
+        </div>
+    </div>
+    <div class="py-20">
+        <div class="container mx-auto bg-neutral-100">
+            <img class="w-[100%]"
+                src="https://bizweb.dktcdn.net/100/342/645/themes/701397/assets/banner_product_noibat.jpg?1664094665337"
+                alt="">
+            <div class="category-all flex justify-between gap-2 py-6">
+                <div class="category-1">
+                    <h2 class="font-normal text-3xl py-5">DANH MỤC</h2>
+                    <h3 class="font-normal py-2"> <a href="#">Trang chủ</a></h3>
+                    <h4 class="flex justify-between gap-36 text-red-500 font-normal py-2"><a href="#">Sản phẩm</a>
+                        <p>></p>
+                    </h4>
+                    <ul class="ml-10 text-sm">
+                        <li class="flex justify-between gap-36 hover:text-red-500 py-1"><a href="#">Giày nam</a>
+                            <p>></p>
+                        </li>
+                        <li class="flex justify-between gap-36 hover:text-red-500 py-1"><a href="#">Giày nữ</a>
+                            <p>></p>
+                        </li>
+                        <li class="flex justify-between gap-36 hover:text-red-500 py-1"><a href="#">Giày bé nam </a>
+                            <p>></p>
+                        </li>
+                        <li class="flex justify-between gap-36 hover:text-red-500 py-1"><a href="#">Giày bé gái</a>
+                            <p>></p>
+                        </li>
+                        <li class="flex justify-between gap-36 hover:text-red-500 py-1"><a href="#">Giày tây</a>
+                            <p>></p>
+                        </li>
+                    </ul>
+                    <h4 class="flex justify-between gap-36 text-red-500 font-normal py-2"><a href="#">Giày thể thao</a>
+                        <p>></p>
+                    </h4>
+                    <ul class="ml-10 text-sm">
+                        <li class="hover:text-red-500 py-1"><a href="#">Giày ultra boots</a></li>
+                        <li class="hover:text-red-500 py-1"><a href="#">Giày chạy bộ</a></li>
+                        <li class="hover:text-red-500 flex justify-between gap-36 py-1"><a href="#">Giày đi phượt</a>
+                            <p>></p>
+                        </li>
+                        <li class="hover:text-red-500 py-1"><a href="#">Giày bitis</a></li>
+                        <li class="hover:text-red-500 py-1"><a href="#">Giày nike</a></li>
+                    </ul>
+
+                    <h4 class="flex justify-between gap-36 hover:text-red-500 font-normal py-2"><a href="#">Liên hệ</a>
+                        <p>></p>
+                    </h4>
+
+                    <h4 class="flex justify-between gap-36 hover:text-red-500 font-normal py-2"><a href="#">Giới
+                            thiệu</a>
+                        <p>></p>
+                    </h4>
+
+                    <h4 class="flex justify-between gap-36 hover:text-red-500 font-normal py-2"><a href="#">Tin tức</a>
+                        <p>></p>
+                    </h4>
+                </div>
+                <div class="category_2 md:grid grid-cols-4 gap-6">
+                    <div class="border-2 rounded-md border-dotted w-[220px]">
+                        <img class="h-[280px]" src="" alt="">
+                        <p class=" text-center">Giày thể thao Hura chính hãng mới về</p>
+                        <hr class="boder-2 rounded-md border-dotted">
+                        <div class="price-1 py-2 md:flex justify-between">
+                            <div class="">
+                                <p class="text-red-500">1.200.000đ</p>
+                                <p class="text-xs font-mono line-through">1.500.000đ</p>
+                            </div>
+                            <button class="border rounded-md bg-red-500 px-3 text-white">Chi tiết</button>
+                        </div>
+                    </div>
+
+                    <div class="border-2 rounded-md border-dotted w-[220px]">
+                        <img class="h-[280px]" src="" alt="">
+                        <p class=" text-center">Giày thể thao Hura chính hãng mới về</p>
+                        <hr class="boder-2 rounded-md border-dotted">
+                        <div class="price-1 py-2 md:flex justify-between">
+                            <div class="">
+                                <p class="text-red-500">1.200.000đ</p>
+                                <p class="text-xs font-mono line-through">1.500.000đ</p>
+                            </div>
+                            <button class="border rounded-md bg-red-500 px-3 text-white">Chi tiết</button>
+                        </div>
+                    </div>
+
+                    <div class="border-2 rounded-md border-dotted w-[220px]">
+                        <img class="h-[280px]" src="" alt="">
+                        <p class=" text-center">Giày thể thao Hura chính hãng mới về</p>
+                        <hr class="boder-2 rounded-md border-dotted">
+                        <div class="price-1 py-2 md:flex justify-between">
+                            <div class="">
+                                <p class="text-red-500">1.200.000đ</p>
+                                <p class="text-xs font-mono line-through">1.500.000đ</p>
+                            </div>
+                            <button class="border rounded-md bg-red-500 px-3 text-white">Chi tiết</button>
+                        </div>
+                    </div>
+
+                    <div class="border-2 rounded-md border-dotted w-[220px]">
+                        <img class="h-[280px]" src="" alt="">
+                        <p class=" text-center">Giày thể thao Hura chính hãng mới về</p>
+                        <hr class="boder-2 rounded-md border-dotted">
+                        <div class="price-1 py-2 md:flex justify-between">
+                            <div class="">
+                                <p class="text-red-500">1.200.000đ</p>
+                                <p class="text-xs font-mono line-through">1.500.000đ</p>
+                            </div>
+                            <button class="border rounded-md bg-red-500 px-3 text-white">Chi tiết</button>
+                        </div>
+                    </div>
+
+                    <div class="border-2 rounded-md border-dotted w-[220px]">
+                        <img class="h-[280px]" src="" alt="">
+                        <p class=" text-center">Giày thể thao Hura chính hãng mới về</p>
+                        <hr class="boder-2 rounded-md border-dotted">
+                        <div class="price-1 py-2 md:flex justify-between">
+                            <div class="">
+                                <p class="text-red-500">1.200.000đ</p>
+                                <p class="text-xs font-mono line-through">1.500.000đ</p>
+                            </div>
+                            <button class="border rounded-md bg-red-500 px-3 text-white">Chi tiết</button>
+                        </div>
+                    </div>
+
+                    <div class="border-2 rounded-md border-dotted w-[220px]">
+                        <img class="h-[280px]" src="" alt="">
+                        <p class=" text-center">Giày thể thao Hura chính hãng mới về</p>
+                        <hr class="boder-2 rounded-md border-dotted">
+                        <div class="price-1 py-2 md:flex justify-between">
+                            <div class="">
+                                <p class="text-red-500">1.200.000đ</p>
+                                <p class="text-xs font-mono line-through">1.500.000đ</p>
+                            </div>
+                            <button class="border rounded-md bg-red-500 px-3 text-white">Chi tiết</button>
+                        </div>
+                    </div>
+
+                    <div class="border-2 rounded-md border-dotted w-[220px]">
+                        <img class="h-[280px]" src="" alt="">
+                        <p class=" text-center">Giày thể thao Hura chính hãng mới về</p>
+                        <hr class="boder-2 rounded-md border-dotted">
+                        <div class="price-1 py-2 md:flex justify-between">
+                            <div class="">
+                                <p class="text-red-500">1.200.000đ</p>
+                                <p class="text-xs font-mono line-through">1.500.000đ</p>
+                            </div>
+                            <button class="border rounded-md bg-red-500 px-3 text-white">Chi tiết</button>
+                        </div>
+                    </div>
+
+                    <div class="border-2 rounded-md border-dotted w-[220px]">
+                        <img class="h-[280px]" src="" alt="">
+                        <p class=" text-center">Giày thể thao Hura chính hãng mới về</p>
+                        <hr class="boder-2 rounded-md border-dotted">
+                        <div class="price-1 py-2 md:flex justify-between">
+                            <div class="">
+                                <p class="text-red-500">1.200.000đ</p>
+                                <p class="text-xs font-mono line-through">1.500.000đ</p>
+                            </div>
+                            <button class="border rounded-md bg-red-500 px-3 text-white">Chi tiết</button>
+                        </div>
+                    </div>
+
+                </div>
+            </div>
+            <div class="ml-[310px] text-center py-6">
+                <button class="border-red-500 bg-red-500 rounded-md  text-white font-medium w-[120px] py-3">Xem tất
+                    cả></button>
+            </div>
+        </div>
+    </div>
+    <footer class="bg-neutral-100 py-6">
+        <div class="flex justify-between container mx-auto">
+            <div class="flex gap-3">
+                <img src="https://bizweb.dktcdn.net/100/342/645/themes/701397/assets/srv_1.png?1664094665337" alt="">
+                <div class="">
+                    <p class="font-bold">Miễn phí vận chuyển</p>
+                    <p class="font-normal text-sm">Miễn phí vận chuyển nội thành</p>
+                </div>
+            </div>
+
+            <div class="flex gap-3">
+                <img src="https://bizweb.dktcdn.net/100/342/645/themes/701397/assets/srv_2.png?1664094665337" alt="">
+                <div class="">
+                    <p class="font-bold">Đổi trả hàng</p>
+                    <p class="font-normal text-sm">Đổi trả lên tới 30 ngày</p>
+                </div>
+            </div>
+
+            <div class="flex gap-3">
+                <img src="https://bizweb.dktcdn.net/100/342/645/themes/701397/assets/srv_3.png?1664094665337" alt="">
+                <div class="">
+                    <p class="font-bold">Tiết kiệm thời gian</p>
+                    <p class="font-normal text-sm">Mua sắm dễ hơn khi online</p>
+                </div>
+            </div>
+
+            <div class="flex gap-3">
+                <img src="https://bizweb.dktcdn.net/100/342/645/themes/701397/assets/srv_4.png?1664094665337" alt="">
+                <div class="">
+                    <p class="font-bold">Tư vấn trực tiếp</p>
+                    <p class="font-normal text-sm">Đội ngũ tư vấn nhiệt tình</p>
+                </div>
+            </div>
+        </div>
+        <div class="relative pt-6">
+            <img class="w-[100%] h-[480px] opacity-60"
+                src="https://www.etonline.com/sites/default/files/styles/max_1280x720/public/images/2022-12/GettyImages-1046571536.jpg?h=83570319&itok=8SFDjqhC"
+                alt="">
+            <div class="container mx-auto ">
+                <div class=" text-white absolute top-[30%] flex gap-[250px]">
+                    <ul>
+                        <li class="font-bold py-2">CHĂM SÓC KHÁCH HÀNG</li>
+                        <li class="hover:text-red-500 py-1 font-normal"><a href="#">Trang chủ</a></li>
+                        <li class="hover:text-red-500 py-1 font-normal"><a href="#">Sản phẩm</a></li>
+                        <li class="hover:text-red-500 py-1 font-normal"><a href="#">Giày thể thao</a></li>
+                        <li class="hover:text-red-500 py-1 font-normal"><a href="#">Liên hệ</a></li>
+                        <li class="hover:text-red-500 py-1 font-normal"><a href="#">Giới thiệu</a></li>
+                        <li class="hover:text-red-500 py-1 font-normal"><a href="#">Tin tức</a></li>
+                    </ul>
+
+                    <ul>
+                        <li class="font-bold py-2">HƯỚNG DẪN</li>
+                        <li class="hover:text-red-500 py-1 font-normal"><a href="#">Trang chủ</a></li>
+                        <li class="hover:text-red-500 py-1 font-normal"><a href="#">Sản phẩm</a></li>
+                        <li class="hover:text-red-500 py-1 font-normal"><a href="#">Giày thể thao</a></li>
+                        <li class="hover:text-red-500 py-1 font-normal"><a href="#">Liên hệ</a></li>
+                        <li class="hover:text-red-500 py-1 font-normal"><a href="#">Giới thiệu</a></li>
+                        <li class="hover:text-red-500 py-1 font-normal"><a href="#">Tin tức</a></li>
+                    </ul>
+
+                    <ul>
+                        <li class="font-bold py-2">CHÍNH SÁCH</li>
+                        <li class="hover:text-red-500 py-1 font-normal"><a href="#">Trang chủ</a></li>
+                        <li class="hover:text-red-500 py-1 font-normal"><a href="#">Sản phẩm</a></li>
+                        <li class="hover:text-red-500 py-1 font-normal"><a href="#">Giày thể thao</a></li>
+                        <li class="hover:text-red-500 py-1 font-normal"><a href="#">Liên hệ</a></li>
+                        <li class="hover:text-red-500 py-1 font-normal"><a href="#">Giới thiệu</a></li>
+                        <li class="hover:text-red-500 py-1 font-normal"><a href="#">Tin tức</a></li>
+                    </ul>
+
+                    <ul>
+                        <li class="font-bold py-2">VỀ CỬA HÀNG</li>
+                        <li class="hover:text-red-500 py-1 font-normal"><a href="#">Trang chủ</a></li>
+                        <li class="hover:text-red-500 py-1 font-normal"><a href="#">Sản phẩm</a></li>
+                        <li class="hover:text-red-500 py-1 font-normal"><a href="#">Giày thể thao</a></li>
+                        <li class="hover:text-red-500 py-1 font-normal"><a href="#">Liên hệ</a></li>
+                        <li class="hover:text-red-500 py-1 font-normal"><a href="#">Giới thiệu</a></li>
+                        <li class="hover:text-red-500 py-1 font-normal"><a href="#">Tin tức</a></li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+        <div class="flex justify-between container mx-auto">
+            <div class="text-center pt-5">
+                <p class="font-bold text-sm">GỌI MUA HÀNG (8H-21H)</p>
+                <p class="font-normal  text-2xl pt-4 hover:text-red-500 cursor-pointer">1900 6750</p>
+                <p class="font-normal text-xs ">Tất cả các ngày trong tuần</p>
+            </div>
+
+            <div class="text-center pt-5">
+                <p class="font-bold text-sm">GỌI KHIẾU NẠI(8H-21H)</p>
+                <p class="font-normal  text-2xl pt-4 hover:text-red-500 cursor-pointer">1900 6750</p>
+                <p class="font-normal text-xs ">Tất cả các ngày trong tuần</p>
+            </div>
+
+            <div class="pt-5">
+                <p class="font-bold text-sm">NHẬN ƯU ĐÃI NGAY</p>
+                <label class="flex pt-5">
+                    <input class="border border-gray-400 rounded-none py-2 px-6" type="email"
+                        placeholder="Nhập email của bạn">
+                    <button class="border border-red-500 rounded-none bg-red-500 font-medium text-white px-4">Đăng
+                        ký</button>
+                </label>
+            </div>
+            <div class="pt-5">
+                <p class="font-bold text-sm">THEO DÕI NGAY</p>
+                <span class="flex gap-3 pt-5">
+                    <img class="w-8" src="https://cdn-icons-png.flaticon.com/128/3536/3536394.png" alt="">
+                    <img class="w-8" src="https://cdn-icons-png.flaticon.com/128/300/300221.png" alt="">
+                    <img class="w-8" src="https://cdn-icons-png.flaticon.com/128/2111/2111463.png" alt="">
+                    <img class="w-8" src="https://cdn-icons-png.flaticon.com/128/3670/3670147.png" alt="">
+                </span>
+            </div>
+        </div>
+    </footer>
+</body>
+
+</html>
