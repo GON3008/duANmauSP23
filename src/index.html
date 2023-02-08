@@ -35,6 +35,12 @@
         font-size: 3.75rem;
         font-family: Montserrat, sans-serif;
     }
+    .test .show{
+        opacity: 1;
+    }
+    .test .hide{
+        opacity: 0;
+    }
 </style>
 
 <body class="box-border">
@@ -103,18 +109,24 @@
             src="https://bizweb.dktcdn.net/100/342/645/themes/701397/assets/slider_2.jpg?1664094665337" alt="">
     </div>
     <div class="container mx-auto py-8">
-        <div class="product-small ">
+        <script src="https://ajax.googleapis.com/ajax/libs/jquery/2.0.0/jquery.min.js"></script>
+        <div class="product-small text-white">
             <div class="round-1-prd md:grid grid-cols-2 gap-3">
-                <div class="round-1-prd-1">
+                <div class="round-1-prd-1 relative titles">
                     <img class="w-[100%] h-[250px]"
                         src="https://bizweb.dktcdn.net/100/342/645/themes/701397/assets/banner_project_1.jpg?1664094665337"
                         alt="">
+                        
+                        <p class="absolute font-bold text-3xl text-center top-[70%]">Giày Nike Jordan</p>
+                        <p class="absolute top-[80%] test hide">sdsdds</p>
+                    
                 </div>
 
-                <div class="round-2-prd-4">
+                <div class="round-2-prd-4 relative">
                     <img class="w-[100%] h-[250px]"
                         src="https://bizweb.dktcdn.net/100/342/645/themes/701397/assets/banner_project_2.jpg?1664094665337"
                         alt="">
+                        <p class="absolute text-3xl font-bold top-[70%]">Giày Ultra Boost</p>
                 </div>
                 <!-- <div class="grid grid-cols-2 pt-3 gap-4">
                 <div class="round-1-prd-2">
@@ -126,10 +138,11 @@
             </div> -->
             </div>
             <div class="round-2-prd md:grid grid-cols-3 gap-3 pt-3">
-                <div class="round-1-prd-2">
-                    <img class="w-[100%]"
+                <div class="round-1-prd-2 relative">
+                    <img class="w-[100%] hover:scale-100 translate ease-in-out duration-150 hover: translate-y-1"
                         src="https://bizweb.dktcdn.net/100/342/645/themes/701397/assets/banner_project_3.jpg?1664094665337"
                         alt="">
+                        <p></p>
                 </div>
                 <div class="round-1-prd-3">
                     <img class="w-[100%]"
@@ -164,7 +177,7 @@
 
             <div class="border-2 rounded-md border-dotted">
                 <img class="h-[280px]"
-                    src="https://bizweb.dktcdn.net/thumb/medium/100/342/645/products/bd30ea8934835dfbad4dca4072b1ba3b.jpg?v=1545572480550"
+                    src="https://bizweb.dktcdn.net/thumb/medium/100/342/645/products/5a2609ca0d14e14ab805.jpg?v=1545572344780"
                     alt="">
                 <p class=" text-center">Giày đá bóng sân cỏ nhân tạo</p>
                 <hr class="boder-2 rounded-md border-dotted">
@@ -673,6 +686,17 @@
             </div>
         </div>
     </footer>
+    <script>
+        $(document).readdy(function(){
+            $(".titles").hover(
+                function(){
+                $(this).next('.test').removeClass('hide').addClass('show');
+                },function(){
+                    $(this).next('.test').removeClass('show').addClass('hidden')
+                }
+            )
+        });
+    </script>
 </body>
 
 </html>
