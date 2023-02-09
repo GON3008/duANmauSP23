@@ -41,6 +41,54 @@
     .test.hide{
         opacity: 0;
     }
+
+
+
+
+.menu-small li a {
+  
+  text-decoration: none;
+  --b: 0.2em;
+  --c: white;
+  
+  padding-block: var(--b);
+
+  background:
+      linear-gradient(var(--c) 50%, #000 0) 0% calc(100% - var(--_p, 0%))/100% 200%,
+      linear-gradient(var(--c) 0 0) 0% var(--_p, 0%)/var(--_p, 0%) var(--b) no-repeat;
+  -webkit-background-clip: text, padding-box;
+  background-clip: text, padding-box;
+  transition: .3s var(--_s, 0s) linear, background-size .3s calc(.3s - var(--_s, 0s));
+}
+
+.menu ul li a:hover {
+  color: whitesmoke;
+  --_p: 100%;
+  --_s: .3s;
+}
+
+.menu-small{
+justify-content: space-evenly;
+align-items: center;
+text-transform: uppercase;
+}
+
+.icon div{
+width: 30px;
+height:3px;
+background: #000;
+margin: 5px;
+transition: all 0.3s ease;
+}
+.icon{
+display: none;
+}
+hr{
+  width: 1200px;
+  max-width: 100%;
+ margin: auto;
+border: 1px solid #F99B2A;
+}
 </style>
 
 <body class="box-border">
@@ -94,8 +142,16 @@
             </div>
         </div>
     </div>
-    <div class="border rounded-md bg-red-500 py-6">
-        <ul class="container mx-auto flex justify-between text-white font-medium text-lg">
+    <div class="menu border rounded-md bg-red-500 py-6">
+        <div class="icon">
+            <div class="line1"></div>
+            <div class="line2"></div>
+            <div class="line3"></div>
+            <div class="line4"></div>
+            <div class="line5"></div>
+            <div class="line6"></div>
+        </div>
+        <ul class="menu-small container mx-auto flex justify-between text-white font-medium text-lg">
             <li><a href="#">Trang Chủ</a></li>
             <li><a href="#">Sản Phẩm</a></li>
             <li><a href="#">Giày Thể thao</a></li>
@@ -190,14 +246,15 @@
     </div>
     <div class="container mx-auto bg-neutral-100 py-10">
         <h1 class="text-center font-medium text-3xl ">Sản Phẩm Bán Chạy</h1>
-        <div class="md:grid grid-cols-5 gap-4 pt-8">
-            <div class="border-2 rounded-md border-dotted">
-                <img class="h-[280px]"
+        <div class="md:grid grid-cols-5 gap-4 pt-8 cursor-pointer">
+            <div class="border-2 rounded-md border-dotted relative">
+                <img class="h-[280px] border-dotted border-[1px]"
                     src="https://bizweb.dktcdn.net/thumb/medium/100/342/645/products/bd30ea8934835dfbad4dca4072b1ba3b.jpg?v=1545572480550"
                     alt="">
-                <p class=" text-center">Giày đá bóng sân cỏ nhân tạo</p>
-                <hr class="boder-2 rounded-md border-dotted">
-                <div class="price-1 py-2 md:flex justify-between">
+
+                <p class="font-extralight text-base absolute top-[230px] ml-5 hover:text-red-500">Giày đá bóng sân cỏ nhân tạo</p>
+        
+                <div class="price-1 pt-3 md:flex justify-between">
                     <div class="">
                         <p class="text-red-500">1.200.000đ</p>
                         <p class="text-xs font-mono line-through">1.500.000đ</p>
@@ -206,12 +263,12 @@
                 </div>
             </div>
 
-            <div class="border-2 rounded-md border-dotted">
+            <div class="border-2 rounded-md border-dotted relative">
                 <img class="h-[280px]"
                     src="https://bizweb.dktcdn.net/thumb/medium/100/342/645/products/5a2609ca0d14e14ab805.jpg?v=1545572344780"
                     alt="">
-                <p class=" text-center">Giày đá bóng sân cỏ nhân tạo</p>
-                <hr class="boder-2 rounded-md border-dotted">
+                <p class=" text-base font-light absolute top-[230px] ml-3 text-center hover:text-red-500">Giày đá bóng chính hãng hàng hot</p>
+               
                 <div class="price-1 py-2 md:flex justify-between">
                     <div class="">
                         <p class="text-red-500">1.200.000đ</p>
@@ -221,12 +278,12 @@
                 </div>
             </div>
 
-            <div class="border-2 rounded-md border-dotted">
+            <div class="border-2 rounded-md border-dotted relative">
                 <img class="h-[280px]"
-                    src="https://bizweb.dktcdn.net/thumb/medium/100/342/645/products/bd30ea8934835dfbad4dca4072b1ba3b.jpg?v=1545572480550"
+                    src="https://bizweb.dktcdn.net/thumb/medium/100/342/645/products/adidas-ultra-boost-4-cp9250-inside.jpg?v=1545572071970"
                     alt="">
-                <p class=" text-center">Giày đá bóng sân cỏ nhân tạo</p>
-                <hr class="boder-2 rounded-md border-dotted">
+                <p class="absolute text-base font-light top-[230px] ml-3 text-center hover:text-red-500">Giày thể thao kiểu dáng ulta boots</p>
+                
                 <div class="price-1 py-2 md:flex justify-between">
                     <div class="">
                         <p class="text-red-500">1.200.000đ</p>
@@ -236,12 +293,12 @@
                 </div>
             </div>
 
-            <div class="border-2 rounded-md border-dotted">
+            <div class="border-2 rounded-md border-dotted relative">
                 <img class="h-[280px]"
-                    src="https://bizweb.dktcdn.net/thumb/medium/100/342/645/products/bd30ea8934835dfbad4dca4072b1ba3b.jpg?v=1545572480550"
+                    src="https://bizweb.dktcdn.net/thumb/medium/100/342/645/products/1-743624de-c3ad-40a5-a64e-6ac148652219-b0a6d7fb-0c11-4e3e-83a8-44d4e00066b5.png?v=1545572153183"
                     alt="">
-                <p class=" text-center">Giày đá bóng sân cỏ nhân tạo</p>
-                <hr class="boder-2 rounded-md border-dotted">
+                <p class="absolute top-[230px] ml-2 text-base font-light text-center hover:text-red-500">Giày bốt cổ cao dây đan cho nam</p>
+                
                 <div class="price-1 py-2 md:flex justify-between">
                     <div class="">
                         <p class="text-red-500">1.200.000đ</p>
@@ -251,12 +308,12 @@
                 </div>
             </div>
 
-            <div class="border-2 rounded-md border-dotted">
+            <div class="border-2 rounded-md border-dotted relative">
                 <img class="h-[280px]"
-                    src="https://bizweb.dktcdn.net/thumb/medium/100/342/645/products/bd30ea8934835dfbad4dca4072b1ba3b.jpg?v=1545572480550"
+                    src="https://bizweb.dktcdn.net/thumb/medium/100/342/645/products/zapatos-de-futbol-buckle-design-football-boots.jpg?v=1545560752950"
                     alt="">
-                <p class=" text-center">Giày đá bóng sân cỏ nhân tạo</p>
-                <hr class="boder-2 rounded-md border-dotted">
+                <p class="absolute top-[230px] ml-2 text-base font-light text-center hover:text-red-500">Giày Prowin S50 thể thao thao siêu chất</p>
+                
                 <div class="price-1 py-2 md:flex justify-between">
                     <div class="">
                         <p class="text-red-500">1.200.000đ</p>
@@ -285,66 +342,66 @@
                 </div>
             </div>
             <div class="md:grid grid-cols-5 gap-4 pt-8">
-                <div class="border-2 rounded-md border-dotted">
-                    <img class="h-[280px]" src="" alt="">
-                    <p class=" text-center">Giày thể thao Hura chính hãng mới về</p>
-                    <hr class="boder-2 rounded-md border-dotted">
+                <div class="border-2 rounded-md border-dotted relative">
+                    <img class="h-[270px]" src="https://bizweb.dktcdn.net/thumb/medium/100/342/645/products/product-image-636130995-1200x.jpg?v=1545565674910" alt="">
+                    <p class="absolute top-[215px] ml-2 text-base font-light text-center hover:text-red-500">Giày thể thao Prophere nữ hàng chính hãng</p>
+                   
                     <div class="price-1 py-2 md:flex justify-between">
                         <div class="">
-                            <p class="text-red-500">1.200.000đ</p>
-                            <p class="text-xs font-mono line-through">1.500.000đ</p>
+                            <p class="text-red-500">1.650.000đ</p>
+                        
                         </div>
-                        <button class="border rounded-md bg-red-500 px-3 text-white">Chi tiết</button>
+                        <button class="border rounded-md bg-red-500 px-3 py-[7px] text-white">Chi tiết</button>
                     </div>
                 </div>
 
-                <div class="border-2 rounded-md border-dotted">
-                    <img class="h-[280px]" src="" alt="">
-                    <p class=" text-center">Giày thể thao Hura chính hãng mới về</p>
-                    <hr class="boder-2 rounded-md border-dotted">
+                <div class="border-2 rounded-md border-dotted relative">
+                    <img class="h-[270px]" src="https://bizweb.dktcdn.net/thumb/medium/100/342/645/products/side-99fc8805-c85d-4893-ac79-6de525cf3af6.png?v=1545565515373" alt="">
+                    <p class="absolute top-[215px] ml-2 text-base font-light text-center hover:text-red-500">Giày thể thao Hura chính hãng mới về</p>
+                    
                     <div class="price-1 py-2 md:flex justify-between">
                         <div class="">
                             <p class="text-red-500">1.200.000đ</p>
-                            <p class="text-xs font-mono line-through">1.500.000đ</p>
+                           
                         </div>
-                        <button class="border rounded-md bg-red-500 px-3 text-white">Chi tiết</button>
+                        <button class="border rounded-md bg-red-500 px-3 py-[7px] text-white">Chi tiết</button>
                     </div>
                 </div>
 
-                <div class="border-2 rounded-md border-dotted">
-                    <img class="h-[280px]" src="" alt="">
-                    <p class=" text-center">Giày thể thao Hura chính hãng mới về</p>
-                    <hr class="boder-2 rounded-md border-dotted">
+                <div class="border-2 rounded-md border-dotted relative">
+                    <img class="h-[270px]" src="https://bizweb.dktcdn.net/thumb/medium/100/342/645/products/1aeccbab979c6d695c3221cda5219094f2db3b3c.png?v=1545565185977" alt="">
+                    <p class="absolute top-[215px] ml-2 text-base font-light text-center hover:text-red-500">Giày thể thao Just Do It nam nữ loại đẹp</p>
+                   
                     <div class="price-1 py-2 md:flex justify-between">
                         <div class="">
-                            <p class="text-red-500">1.200.000đ</p>
-                            <p class="text-xs font-mono line-through">1.500.000đ</p>
+                            <p class="text-red-500">980.000đ</p>
+                            
                         </div>
-                        <button class="border rounded-md bg-red-500 px-3 text-white">Chi tiết</button>
+                        <button class="border rounded-md bg-red-500 px-3 py-[7px] text-white">Chi tiết</button>
                     </div>
                 </div>
 
-                <div class="border-2 rounded-md border-dotted">
-                    <img class="h-[280px]" src="" alt="">
-                    <p class=" text-center">Giày thể thao Hura chính hãng mới về</p>
-                    <hr class="boder-2 rounded-md border-dotted">
+                <div class="border-2 rounded-md border-dotted relative">
+                    <img class="h-[270px]" src="https://bizweb.dktcdn.net/thumb/medium/100/342/645/products/li-ning-2016-ph-n-running-shoes-breathable-l-i-thu-ch-y-b-sneakers-sport.jpg?v=1545564786507" alt="">
+                    <p class="absolute top-[215px] ml-2 text-base font-light text-center hover:text-red-500">Giày Sneaker nữ gót thuê mèo dễ thương<p>
+                   
                     <div class="price-1 py-2 md:flex justify-between">
                         <div class="">
-                            <p class="text-red-500">1.200.000đ</p>
-                            <p class="text-xs font-mono line-through">1.500.000đ</p>
+                            <p class="text-red-500">500.000đ</p>
+                           
                         </div>
-                        <button class="border rounded-md bg-red-500 px-3 text-white">Chi tiết</button>
+                        <button class="border rounded-md bg-red-500 px-3 py-[7px] text-white">Chi tiết</button>
                     </div>
                 </div>
 
-                <div class="border-2 rounded-md border-dotted">
-                    <img class="h-[280px]" src="" alt="">
-                    <p class=" text-center">Giày thể thao Hura chính hãng mới về</p>
-                    <hr class="boder-2 rounded-md border-dotted">
+                <div class="border-2 rounded-md border-dotted relative">
+                    <img class="h-[270px]" src="https://bizweb.dktcdn.net/thumb/medium/100/342/645/products/962ef106e8fb886db9e84a16af1aad3f.jpg?v=1545564544530" alt="">
+                    <p class="absolute top-[215px] ml-2 text-base font-light text-center hover:text-red-500">Giày thể thao nữ PassGo mẫu mới</p>
+                   
                     <div class="price-1 py-2 md:flex justify-between">
                         <div class="">
-                            <p class="text-red-500">1.200.000đ</p>
-                            <p class="text-xs font-mono line-through">1.500.000đ</p>
+                            <p class="text-red-500">499.000đ</p>
+                            <p class="text-xs font-mono line-through">680.000đ</p>
                         </div>
                         <button class="border rounded-md bg-red-500 px-3 text-white">Chi tiết</button>
                     </div>
@@ -368,66 +425,66 @@
             </div>
         </div>
         <div class="md:grid grid-cols-5 gap-4 pt-8">
-            <div class="border-2 rounded-md border-dotted">
-                <img class="h-[280px]" src="" alt="">
-                <p class=" text-center">Giày thể thao Hura chính hãng mới về</p>
+            <div class="border-2 rounded-md border-dotted relative">
+                <img class="h-[270px]" src="https://bizweb.dktcdn.net/thumb/medium/100/342/645/products/l6jrpjbh.jpg?v=1545571760223" alt="">
+                <p class="absolute top-[225px] ml-7 text-base font-light text-center hover:text-red-500">Giày lưới nữ kiểu dáng mới</p>
+                
+                <div class="price-1 py-2 md:flex justify-between">
+                    <div class="">
+                        <p class="text-red-500">350.000đ</p>
+
+                    </div>
+                    <button class="border rounded-md bg-red-500 px-3 py-[7px] text-white">Chi tiết</button>
+                </div>
+            </div>
+
+            <div class="border-2 rounded-md border-dotted relative">
+                <img class="h-[270px]" src="https://bizweb.dktcdn.net/thumb/medium/100/342/645/products/367-giay-moi-nu-nu-310-1.jpg?v=1545571618637" alt="">
+                <p class="absolute top-[225px] ml-4 text-base font-light text-center hover:text-red-500">Slip on nhũ sang trọng cho nữ</p>
                 <hr class="boder-2 rounded-md border-dotted">
                 <div class="price-1 py-2 md:flex justify-between">
                     <div class="">
-                        <p class="text-red-500">1.200.000đ</p>
-                        <p class="text-xs font-mono line-through">1.500.000đ</p>
+                        <p class="text-red-500">160.000đ</p>
+                        <p class="text-xs font-mono line-through">180.000đ</p>
                     </div>
                     <button class="border rounded-md bg-red-500 px-3 text-white">Chi tiết</button>
                 </div>
             </div>
 
-            <div class="border-2 rounded-md border-dotted">
-                <img class="h-[280px]" src="" alt="">
-                <p class=" text-center">Giày thể thao Hura chính hãng mới về</p>
+            <div class="border-2 rounded-md border-dotted relative">
+                <img class="h-[270px]" src="https://bizweb.dktcdn.net/thumb/medium/100/342/645/products/men-s-original-canvas-casual-skate-shoes-2-3cc87221-a005-4525-a5fa-58b2d512b3ad.png?v=1545566249147" alt="">
+                <p class="absolute top-[225px] ml-3 text-base font-light text-center hover:text-red-500">Giày Slip on  vải sang trọng cho nữ</p>
                 <hr class="boder-2 rounded-md border-dotted">
                 <div class="price-1 py-2 md:flex justify-between">
                     <div class="">
-                        <p class="text-red-500">1.200.000đ</p>
-                        <p class="text-xs font-mono line-through">1.500.000đ</p>
+                        <p class="text-red-500">270.000đ</p>
+                    
+                    </div>
+                    <button class="border rounded-md bg-red-500 px-3 py-[7px] text-white">Chi tiết</button>
+                </div>
+            </div>
+
+            <div class="border-2 rounded-md border-dotted relative">
+                <img class="h-[270px]" src="https://bizweb.dktcdn.net/thumb/medium/100/342/645/products/image-1506933106-uqyew26gxw.jpg?v=1545566154317" alt="">
+                <p class="absolute top-[225px] ml-2 text-base font-light text-center hover:text-red-500">Giày Slip on vải dáng nữ siêu nhẹ</p>
+                
+                <div class="price-1 py-2 md:flex justify-between">
+                    <div class="">
+                        <p class="text-red-500">140.000đ</p>
+                        <p class="text-xs font-mono line-through">280.000đ</p>
                     </div>
                     <button class="border rounded-md bg-red-500 px-3 text-white">Chi tiết</button>
                 </div>
             </div>
 
-            <div class="border-2 rounded-md border-dotted">
-                <img class="h-[280px]" src="" alt="">
-                <p class=" text-center">Giày thể thao Hura chính hãng mới về</p>
-                <hr class="boder-2 rounded-md border-dotted">
+            <div class="border-2 rounded-md border-dotted relative">
+                <img class="h-[270px]" src="https://bizweb.dktcdn.net/thumb/medium/100/342/645/products/1a84ad0b67a365fc6aa6a775ea2f430d.jpg?v=1545566006053" alt="">
+                <p class="absolute top-[225px] ml-4 text-base font-light text-center hover:text-red-500">Giày Slip on dáng nữ siêu nhẹ</p>
+               
                 <div class="price-1 py-2 md:flex justify-between">
                     <div class="">
-                        <p class="text-red-500">1.200.000đ</p>
-                        <p class="text-xs font-mono line-through">1.500.000đ</p>
-                    </div>
-                    <button class="border rounded-md bg-red-500 px-3 text-white">Chi tiết</button>
-                </div>
-            </div>
-
-            <div class="border-2 rounded-md border-dotted">
-                <img class="h-[280px]" src="" alt="">
-                <p class=" text-center">Giày thể thao Hura chính hãng mới về</p>
-                <hr class="boder-2 rounded-md border-dotted">
-                <div class="price-1 py-2 md:flex justify-between">
-                    <div class="">
-                        <p class="text-red-500">1.200.000đ</p>
-                        <p class="text-xs font-mono line-through">1.500.000đ</p>
-                    </div>
-                    <button class="border rounded-md bg-red-500 px-3 text-white">Chi tiết</button>
-                </div>
-            </div>
-
-            <div class="border-2 rounded-md border-dotted">
-                <img class="h-[280px]" src="" alt="">
-                <p class=" text-center">Giày thể thao Hura chính hãng mới về</p>
-                <hr class="boder-2 rounded-md border-dotted">
-                <div class="price-1 py-2 md:flex justify-between">
-                    <div class="">
-                        <p class="text-red-500">1.200.000đ</p>
-                        <p class="text-xs font-mono line-through">1.500.000đ</p>
+                        <p class="text-red-500">240.000đ</p>
+                        <p class="text-xs font-mono line-through">280.000đ</p>
                     </div>
                     <button class="border rounded-md bg-red-500 px-3 text-white">Chi tiết</button>
                 </div>
@@ -490,105 +547,105 @@
                     </h4>
                 </div>
                 <div class="category_2 md:grid grid-cols-4 gap-6">
-                    <div class="border-2 rounded-md border-dotted w-[220px]">
-                        <img class="h-[280px]" src="" alt="">
-                        <p class=" text-center">Giày thể thao Hura chính hãng mới về</p>
-                        <hr class="boder-2 rounded-md border-dotted">
+                    <div class="border-2 rounded-md border-dotted w-[220px] relative">
+                        <img class="h-[280px]" src="https://bizweb.dktcdn.net/thumb/medium/100/342/645/products/men-s-original-canvas-casual-skate-shoes.png?v=1545564063607" alt="">
+                        <p class="absolute top-[230px] text-base font-light text-center hover:text-red-500">Giày thể thao nữ cổ thấp mẫu mới nhất</p>
+                        
                         <div class="price-1 py-2 md:flex justify-between">
                             <div class="">
-                                <p class="text-red-500">1.200.000đ</p>
-                                <p class="text-xs font-mono line-through">1.500.000đ</p>
+                                <p class="text-red-500">268.000đ</p>
+                              
+                            </div>
+                            <button class="border rounded-md bg-red-500 px-3 py-[7px] text-white">Chi tiết</button>
+                        </div>
+                    </div>
+
+                    <div class="border-2 rounded-md border-dotted w-[220px] relative">
+                        <img class="h-[280px]" src="https://bizweb.dktcdn.net/thumb/medium/100/342/645/products/women-casual-shoes-new-design-rubber-slide.jpg?v=1545563755483" alt="">
+                        <p class="absolute top-[230px] ml-3 text-base font-light text-center hover:text-red-500">Giày sneaker cổ cao cho nữ</p>
+                        
+                        <div class="price-1 py-2 md:flex justify-between">
+                            <div class="">
+                                <p class="text-red-500">187.000đ</p>
+                                <p class="text-xs font-mono line-through">245.000đ</p>
                             </div>
                             <button class="border rounded-md bg-red-500 px-3 text-white">Chi tiết</button>
                         </div>
                     </div>
 
-                    <div class="border-2 rounded-md border-dotted w-[220px]">
-                        <img class="h-[280px]" src="" alt="">
-                        <p class=" text-center">Giày thể thao Hura chính hãng mới về</p>
-                        <hr class="boder-2 rounded-md border-dotted">
+                    <div class="border-2 rounded-md border-dotted w-[220px] relative">
+                        <img class="h-[280px]" src="https://bizweb.dktcdn.net/thumb/medium/100/342/645/products/1-743624de-c3ad-40a5-a64e-6ac148652219-b0a6d7fb-0c11-4e3e-83a8-44d4e00066b5.png?v=1545572153183" alt="">
+                        <p class="absolute top-[230px] text-base font-light text-center hover:text-red-500">Giày bốt cổ cao dây đan cho nam</p>
+                      
                         <div class="price-1 py-2 md:flex justify-between">
                             <div class="">
-                                <p class="text-red-500">1.200.000đ</p>
-                                <p class="text-xs font-mono line-through">1.500.000đ</p>
+                                <p class="text-red-500">480.000đ</p>
+                               
+                            </div>
+                            <button class="border rounded-md bg-red-500 px-3 py-[7px] text-white">Chi tiết</button>
+                        </div>
+                    </div>
+
+                    <div class="border-2 rounded-md border-dotted w-[220px] relative">
+                        <img class="h-[280px]" src="https://bizweb.dktcdn.net/thumb/medium/100/342/645/products/men-s-increase-shoes-8cm-height-increase.jpg?v=1545563234533" alt="">
+                        <p class="absolute top-[230px] text-base font-light text-center hover:text-red-500">Giày nam tăng chiều cao 8cm hot nhất</p>
+                        
+                        <div class="price-1 py-2 md:flex justify-between">
+                            <div class="">
+                                <p class="text-red-500">270.000đ</p>
+                                
+                            </div>
+                            <button class="border rounded-md bg-red-500 px-3 py-[7px] text-white">Chi tiết</button>
+                        </div>
+                    </div>
+
+                    <div class="border-2 rounded-md border-dotted w-[220px] relative">
+                        <img class="h-[280px]" src="https://bizweb.dktcdn.net/thumb/medium/100/342/645/products/8cm-height-up-sports-shoes-summer-korean.jpg?v=1545563026337" alt="">
+                        <p class="absolute top-[230px] text-base font-light text-center hover:text-red-500">Giày tăng chiều cao GTT26 giúp tăng 8cm</p>
+                       
+                        <div class="price-1 py-2 md:flex justify-between">
+                            <div class="">
+                                <p class="text-red-500">240.000đ</p>
+                                <p class="text-xs font-mono line-through">325.000đ</p>
                             </div>
                             <button class="border rounded-md bg-red-500 px-3 text-white">Chi tiết</button>
                         </div>
                     </div>
 
-                    <div class="border-2 rounded-md border-dotted w-[220px]">
-                        <img class="h-[280px]" src="" alt="">
-                        <p class=" text-center">Giày thể thao Hura chính hãng mới về</p>
-                        <hr class="boder-2 rounded-md border-dotted">
+                    <div class="border-2 rounded-md border-dotted w-[220px] relative">
+                        <img class="h-[280px]" src="https://bizweb.dktcdn.net/thumb/medium/100/342/645/products/zapatos-de-futbol-boy-football-boots-soccer.jpg?v=1545562688143" alt="">
+                        <p class="absolute top-[230px] ml-2 text-base font-light text-center hover:text-red-500">Giày đá bóng  chính hãng Mira</p>
+                        
                         <div class="price-1 py-2 md:flex justify-between">
                             <div class="">
-                                <p class="text-red-500">1.200.000đ</p>
-                                <p class="text-xs font-mono line-through">1.500.000đ</p>
+                                <p class="text-red-500">240.000đ</p>
+                                <p class="text-xs font-mono line-through">299.000đ</p>
                             </div>
                             <button class="border rounded-md bg-red-500 px-3 text-white">Chi tiết</button>
                         </div>
                     </div>
 
-                    <div class="border-2 rounded-md border-dotted w-[220px]">
-                        <img class="h-[280px]" src="" alt="">
-                        <p class=" text-center">Giày thể thao Hura chính hãng mới về</p>
-                        <hr class="boder-2 rounded-md border-dotted">
+                    <div class="border-2 rounded-md border-dotted w-[220px] relative">
+                        <img class="h-[280px]" src="https://bizweb.dktcdn.net/thumb/medium/100/342/645/products/zapatos-de-futbol-buckle-design-football-boots.jpg?v=1545560752950" alt="">
+                        <p class="absolute top-[230px] text-base font-light text-center hover:text-red-500">Giày Prowin S50 thể thao siêu chất</p>
+                        
                         <div class="price-1 py-2 md:flex justify-between">
                             <div class="">
-                                <p class="text-red-500">1.200.000đ</p>
-                                <p class="text-xs font-mono line-through">1.500.000đ</p>
+                                <p class="text-red-500">750.000đ</p>
+                                <p class="text-xs font-mono line-through">790.000đ</p>
                             </div>
                             <button class="border rounded-md bg-red-500 px-3 text-white">Chi tiết</button>
                         </div>
                     </div>
 
-                    <div class="border-2 rounded-md border-dotted w-[220px]">
-                        <img class="h-[280px]" src="" alt="">
-                        <p class=" text-center">Giày thể thao Hura chính hãng mới về</p>
-                        <hr class="boder-2 rounded-md border-dotted">
+                    <div class="border-2 rounded-md border-dotted w-[220px] relative">
+                        <img class="h-[280px]" src="https://bizweb.dktcdn.net/thumb/medium/100/342/645/products/1.jpg?v=1545560358303" alt="">
+                        <p class="absolute top-[230px] text-base font-light text-center hover:text-red-500">Giày nữ Ulzzang Fine trắng hồng siêu đẹp</p>
+                       
                         <div class="price-1 py-2 md:flex justify-between">
                             <div class="">
-                                <p class="text-red-500">1.200.000đ</p>
-                                <p class="text-xs font-mono line-through">1.500.000đ</p>
-                            </div>
-                            <button class="border rounded-md bg-red-500 px-3 text-white">Chi tiết</button>
-                        </div>
-                    </div>
-
-                    <div class="border-2 rounded-md border-dotted w-[220px]">
-                        <img class="h-[280px]" src="" alt="">
-                        <p class=" text-center">Giày thể thao Hura chính hãng mới về</p>
-                        <hr class="boder-2 rounded-md border-dotted">
-                        <div class="price-1 py-2 md:flex justify-between">
-                            <div class="">
-                                <p class="text-red-500">1.200.000đ</p>
-                                <p class="text-xs font-mono line-through">1.500.000đ</p>
-                            </div>
-                            <button class="border rounded-md bg-red-500 px-3 text-white">Chi tiết</button>
-                        </div>
-                    </div>
-
-                    <div class="border-2 rounded-md border-dotted w-[220px]">
-                        <img class="h-[280px]" src="" alt="">
-                        <p class=" text-center">Giày thể thao Hura chính hãng mới về</p>
-                        <hr class="boder-2 rounded-md border-dotted">
-                        <div class="price-1 py-2 md:flex justify-between">
-                            <div class="">
-                                <p class="text-red-500">1.200.000đ</p>
-                                <p class="text-xs font-mono line-through">1.500.000đ</p>
-                            </div>
-                            <button class="border rounded-md bg-red-500 px-3 text-white">Chi tiết</button>
-                        </div>
-                    </div>
-
-                    <div class="border-2 rounded-md border-dotted w-[220px]">
-                        <img class="h-[280px]" src="" alt="">
-                        <p class=" text-center">Giày thể thao Hura chính hãng mới về</p>
-                        <hr class="boder-2 rounded-md border-dotted">
-                        <div class="price-1 py-2 md:flex justify-between">
-                            <div class="">
-                                <p class="text-red-500">1.200.000đ</p>
-                                <p class="text-xs font-mono line-through">1.500.000đ</p>
+                                <p class="text-red-500">299.000đ</p>
+                                <p class="text-xs font-mono line-through">320.000đ</p>
                             </div>
                             <button class="border rounded-md bg-red-500 px-3 text-white">Chi tiết</button>
                         </div>
