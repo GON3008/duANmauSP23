@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="../dist/output.css">
+    <title>Document</title>
+</head>
+<style>
+   
+.popover.hide {
+  opacity: 0;
+}
+
+.popover.show {
+  opacity: 1;
+}
+</style>
+<body>
+    <div class="relative">
+<a href="#" class="myPopover">
+    <img class="w-[100%] h-[250px]"
+    src="https://bizweb.dktcdn.net/100/342/645/themes/701397/assets/banner_project_1.jpg?1664094665337"
+    alt="">
+    <p class="absolute font-bold text-3xl text-center top-[70%] ">Giày Nike Jordan</p>
+</a>
+<div class="popover hide text-white">
+   
+    <p class="absolute top-[80%]">sdsdds</p>
+</div>
+</div>
+<a href="#" class="myPopover">help2</a>
+<div class="popover hide">
+  <h4>title2</h4>
+  <p>
+    content2
+  </p>
+</div>
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/2.0.0/jquery.min.js"></script>
+<script>
+    $(document).ready(function() {
+
+
+$(".myPopover").hover(
+  function() {
+$(this).next('.popover').removeClass('hide').addClass('show');
+  }, function() {
+$(this).next('.popover').removeClass('show').addClass('hide');
+  }
+);
+
+});
+</script>
+</body>
+</html>
